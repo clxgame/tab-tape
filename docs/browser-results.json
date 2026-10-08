@@ -1,0 +1,148 @@
+{
+  "checks": [
+    {
+      "label": "browser",
+      "value": {
+        "protocolVersion": "1.3",
+        "product": "Chrome/154.0.8037.98",
+        "revision": "@b859317bf11f6be47f9b7799ec690a0a42a1fb33",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+        "jsVersion": "15.4.80.20"
+      }
+    },
+    {
+      "label": "native IndexedDB and browser WAV decode",
+      "value": {
+        "ok": true,
+        "tests": [
+          "ordered append and input validation",
+          "transaction rollback after storage failure",
+          "multi-chunk WAV export preserves samples and clips PCM24",
+          "recovery retains committed audio and protects active session",
+          "deletion removes metadata and all audio chunks"
+        ]
+      }
+    },
+    {
+      "label": "extension loaded",
+      "value": "ofehaenoieemmojgkfadbghklmnfklha"
+    },
+    {
+      "label": "test tone",
+      "value": {
+        "playing": true,
+        "muted": false,
+        "sampleRate": 44100,
+        "elapsed": 0,
+        "frequencies": [
+          440,
+          880
+        ],
+        "peak": 0.25
+      }
+    },
+    {
+      "label": "toolbar action invoked",
+      "value": true
+    },
+    {
+      "label": "real tab capture",
+      "value": {
+        "status": "recording",
+        "id": "2fa6e3e6-2f06-4ab4-9357-bacf656e1196",
+        "tabId": 1082915797,
+        "title": "Tab Tape · 立体声测试音",
+        "sampleRate": 44100,
+        "channels": 2,
+        "frames": 24576,
+        "bytes": 196608,
+        "peaks": [
+          0.24999988079071045,
+          0.2499999701976776
+        ],
+        "error": null,
+        "warning": null
+      }
+    },
+    {
+      "label": "popup dimensions",
+      "value": {
+        "width": 340,
+        "height": 600
+      }
+    },
+    {
+      "label": "capture survives popup closure",
+      "value": 69632
+    },
+    {
+      "label": "completed recording",
+      "value": {
+        "id": "2fa6e3e6-2f06-4ab4-9357-bacf656e1196",
+        "title": "Tab Tape · 立体声测试音",
+        "createdAt": 1791417491900,
+        "sampleRate": 44100,
+        "channels": 2,
+        "status": "complete",
+        "frames": 73984,
+        "bytes": 591872,
+        "chunkCount": 19
+      }
+    },
+    {
+      "label": "WAV spectrum float32",
+      "value": {
+        "format": "float32",
+        "bytes": 591930,
+        "rawSampleRate": 44100,
+        "sampleRate": 44100,
+        "frames": 73984,
+        "channelCount": 2,
+        "channels": [
+          {
+            "at440": 0.25044829044409783,
+            "at880": 0.000547989271738506,
+            "peak": 0.24999991059303284
+          },
+          {
+            "at440": 0.0006000798704259219,
+            "at880": 0.24996590295256066,
+            "peak": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "label": "WAV spectrum pcm24",
+      "value": {
+        "format": "pcm24",
+        "bytes": 443948,
+        "rawSampleRate": 44100,
+        "sampleRate": 44100,
+        "frames": 73984,
+        "channelCount": 2,
+        "channels": [
+          {
+            "at440": 0.2504482912253364,
+            "at880": 0.0005479885962681826,
+            "peak": 0.24999988079071045
+          },
+          {
+            "at440": 0.000600079694562452,
+            "at880": 0.24996590259035845,
+            "peak": 0.25
+          }
+        ]
+      }
+    },
+    {
+      "label": "Chrome download",
+      "value": {
+        "bytes": 591930,
+        "filename": "740d0d65-0ea7-4e43-838e-dde47a74ee0a.wav"
+      }
+    }
+  ],
+  "errors": [],
+  "ok": true
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tab Tape · 立体声测试音</title>
+    <style>
+      :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #131715; color: #e9eee8; }
+      body { max-width: 720px; margin: 80px auto; padding: 24px; }
+      h1 { font-size: 32px; margin-bottom: 12px; }
+      p, li { line-height: 1.7; color: #b7c3b7; }
+      button { border: 1px solid #5d705b; border-radius: 8px; padding: 12px 18px; background: #293a2d; color: inherit; font: inherit; cursor: pointer; }
+      button:disabled { opacity: .45; cursor: default; }
+      .controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
+      output { display: block; padding: 20px; border: 1px solid #354637; border-radius: 10px; font-variant-numeric: tabular-nums; }
+      code { color: #dcead1; }
+    </style>
+    <script type="module" src="tone.js"></script>
+  </head>
+  <body>
+    <h1>立体声测试音</h1>
+    <p>用于验证 Tab Tape 的声道、采样率与录音连续性。请先调低耳机或扬声器音量。</p>
+    <ul>
+      <li>左声道：<code>440 Hz</code> 正弦波。</li>
+      <li>右声道：<code>880 Hz</code> 正弦波。</li>
+      <li>每个声道峰值：<code>0.25</code>（约 <code>−12.04 dBFS</code>）。</li>
+      <li>播放 60 秒后自动停止；点击静音可以检查录音是否保持连续。</li>
+    </ul>
+    <div class="controls">
+      <button id="start" type="button">播放测试音</button>
+      <button id="mute" type="button" disabled>静音</button>
+      <button id="stop" type="button" disabled>停止</button>
+    </div>
+    <output id="status" aria-live="polite">就绪 · 点击播放，然后在此标签页打开插件开始录制。</output>
+    <p>录制几秒后停止并导出 WAV。使用音频编辑器分别检查左右声道：左声道应为 440 Hz，右声道应为 880 Hz；WAV 的采样率应与插件显示一致。</p>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>录音库 · Tab Tape</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="library-page">
+  <div class="library-shell">
+    <header class="library-header">
+      <a class="brand" href="recordings.html" aria-label="Tab Tape 录音库">Tab Tape</a>
+      <span class="local-label">仅本机保存</span>
+    </header>
+    <main>
+      <section class="live-session" id="live-session" aria-label="当前录音" hidden>
+        <div class="live-info"><p id="live-status">正在录音</p><h2 id="live-title"></h2></div>
+        <span class="live-timer" id="live-timer">00:00</span>
+        <button class="button button--stop" type="button" id="stop-recording">停止并保存</button>
+      </section>
+
+      <div class="notice library-notice" id="library-notice" role="status" hidden></div>
+      <div class="notice library-notice" id="state-notice" role="status" hidden></div>
+
+      <section class="archive-section" aria-labelledby="archive-heading">
+        <div class="archive-toolbar"><div class="section-heading"><h1 id="archive-heading">录音库</h1><span class="count-label" id="visible-count"></span></div><input type="search" id="search" class="search-field" placeholder="搜索录音" aria-label="按标签页标题查找录音" autocomplete="off"></div>
+        <div id="recordings-list" class="recordings-list"></div>
+        <div id="library-empty" class="empty-state"><h2 id="empty-title">还没有录音</h2><p id="empty-copy">播放网页声音，从工具栏打开 Tab Tape 开始录音。</p></div>
+      </section>
+
+      <details class="recording-help">
+        <summary>录音说明</summary>
+        <p>默认导出 32 位浮点 WAV，也可选择 24 位 PCM；不会增加有损编码。录音无法恢复音源已损失的细节。</p>
+        <p>单次上限 1 GiB，48 kHz 立体声约 46 分钟。关闭弹窗仍可录音，关闭浏览器会中断录音。</p>
+        <p>重要录音请下载备份。卸载扩展或清除扩展数据会删除本地录音。</p>
+      </details>
+    </main>
+  </div>
+  <script type="module" src="recordings.js"></script>
+</body>
+</html>

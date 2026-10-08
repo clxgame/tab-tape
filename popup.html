@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Tab Tape · 标签页录音</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="popup-page">
+  <main class="recorder">
+    <header class="brand-header">
+      <span class="brand">Tab Tape</span>
+      <button type="button" class="text-button" id="open-library">录音库</button>
+    </header>
+
+    <section class="capture-panel" aria-label="录音控制">
+      <p class="source-title" id="source-title" aria-label="录音来源">正在读取标签页…</p>
+      <div class="timer-region">
+        <p class="timer" id="timer" aria-label="录音时长">00:00</p>
+        <span class="status-pill" id="status-pill" data-status="idle"><span class="status-dot" aria-hidden="true"></span><span id="status-label">正在连接</span></span>
+        <div class="meter-stack" aria-label="输入电平">
+          <div class="meter-line"><span aria-hidden="true">L</span><div id="meter-left" class="meter" role="meter" aria-label="左声道电平" aria-valuemin="-60" aria-valuemax="0" aria-valuenow="-60"><div class="meter-fill"></div></div></div>
+          <div class="meter-line"><span aria-hidden="true">R</span><div id="meter-right" class="meter" role="meter" aria-label="右声道电平" aria-valuemin="-60" aria-valuemax="0" aria-valuenow="-60"><div class="meter-fill"></div></div></div>
+        </div>
+      </div>
+      <div class="notice" id="state-notice" role="status" hidden></div>
+      <div class="notice" id="action-notice" role="status" hidden></div>
+      <button class="record-button" id="record-button" type="button" disabled><span class="record-button-icon" aria-hidden="true"></span><span id="record-button-label">开始录音</span></button>
+      <p class="capture-hint" id="capture-hint">仅录制当前标签页</p>
+    </section>
+
+    <section class="recent-section" id="recent-section" aria-labelledby="recent-heading" hidden>
+      <h2 id="recent-heading">最近录音</h2>
+      <div id="recent-recordings" class="recent-recordings"></div>
+    </section>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
